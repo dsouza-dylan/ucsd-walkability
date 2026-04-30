@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is UCSD Actually Walkable?</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <p class="hero-eyebrow">Lorem ipsum &nbsp;·&nbsp; Lorem ipsum</p>
+  <h1>Is UCSD Actually Walkable?</h1>
+  <p class="hero-sub">Lorem ipsum</p>
+  <p class="scroll-cue">↓ &nbsp; find out</p>
+</section>
+
+<!-- ══ INTRO ══ -->
+<div class="intro-prose">
+  <p>Lorem ipsum</p>
+  <p>Lorem ipsum</p>
+</div>
+
+<!-- ══ SCROLL SECTION ══ -->
+<div id="scroll-wrapper">
+
+  <div id="map-panel">
+    <div id="map"></div>
+
+    <div id="info-box">
+      <div class="ib-label">Gravity Center</div>
+      <div class="ib-title" id="ib-title">—</div>
+      <div class="ib-stats">
+        <div>
+          <div class="ib-val" id="ib-near">—</div>
+          <span class="ib-unit">min · nearest</span>
+          <span class="ib-college-name" id="ib-near-name">—</span>
+        </div>
+        <div>
+          <div class="ib-val" id="ib-far" style="font-size:1.45rem;padding-top:0.38rem">—</div>
+          <span class="ib-unit">min · farthest</span>
+          <span class="ib-college-name" id="ib-far-name">—</span>
+        </div>
+      </div>
+      <div class="ib-note" id="ib-note">—</div>
+    </div>
+    <div id="map-legend"></div>
+  </div>
+
+  <div id="story-steps">
+
+    <!-- Step 0: Campus origins -->
+    <div class="step" data-step="campus-origins">
+      <div class="step-content">
+        <div class="step-tag">The starting point</div>
+        <h2>Eight colleges. No center.</h2>
+        <p>Lorem ipsum</p>
+        <p></p>
+      </div>
+    </div>
+
+    <!-- Step 1: Gravity intro -->
+    <div class="step" data-step="gravity-intro">
+      <div class="step-content">
+        <div class="step-tag">Four forces</div>
+        <h2>Four places pull students in four directions.</h2>
+        <p>Lorem ipsum</p>
+        <div class="center-list">
+          <div class="center-item"><span class="center-dot" style="background:#38bdf8"></span><strong>Geisel Library</strong> — Academic</div>
+          <div class="center-item"><span class="center-dot" style="background:#a78bfa"></span><strong>Price Center</strong> — Social</div>
+          <div class="center-item"><span class="center-dot" style="background:#fb923c"></span><strong>RIMAC Arena</strong> — Athletic</div>
+          <div class="center-item"><span class="center-dot" style="background:#ffcd00"></span><strong>Trolley Station</strong> — Transit</div>
+        </div>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Step 2: Geisel gravity -->
+    <div class="step" data-step="geisel-gravity">
+      <div class="step-content">
+        <div class="step-tag" style="color:#38bdf8">01 · Academic</div>
+        <h2>Geisel Library</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Step 3: RIMAC gravity -->
+    <div class="step" data-step="rimac-gravity">
+      <div class="step-content">
+        <div class="step-tag" style="color:#fb923c">02 · Athletic</div>
+        <h2>RIMAC Arena</h2>
+        <p>Lorem ipsum.</p>
+      </div>
+    </div>
+
+    <!-- Step 4: Price Center gravity -->
+    <div class="step" data-step="price-gravity">
+      <div class="step-content">
+        <div class="step-tag" style="color:#a78bfa">03 · Social</div>
+        <h2>Price Center</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Step 5: Trolley gravity -->
+    <div class="step" data-step="trolley-gravity">
+      <div class="step-content">
+        <div class="step-tag" style="color:#ffcd00">04 · Transit</div>
+        <h2>Trolley Station</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Step 6: Map release -->
+    <div class="step" data-step="map-release">
+      <div class="step-content">
+        <div class="step-tag">Lorem ipsum</div>
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Synthesis layer 1: Geisel -->
+    <div class="step" data-step="synthesis-1">
+      <div class="step-content">
+        <div class="step-tag" style="color:#38bdf8">Layer 01 · Academic</div>
+        <h2>Geisel Library</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Synthesis layer 2: RIMAC -->
+    <div class="step" data-step="synthesis-2">
+      <div class="step-content">
+        <div class="step-tag" style="color:#fb923c">Layer 02 · Athletic</div>
+        <h2>RIMAC Arena</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Synthesis layer 3: Price -->
+    <div class="step" data-step="synthesis-3">
+      <div class="step-content">
+        <div class="step-tag" style="color:#a78bfa">Layer 03 · Social</div>
+        <h2>Price Center</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+    <!-- Synthesis layer 4: Trolley -->
+    <div class="step" data-step="synthesis-4">
+      <div class="step-content">
+        <div class="step-tag" style="color:#ffcd00">Layer 04 · Transit</div>
+        <h2>Trolley Station</h2>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ TRANSITION ══ -->
+<div id="transition-banner">
+  <h2>Lorem ipsum</h2>
+  <p>Lorem ipsum</p>
+</div>
+
+<!-- ══ PROFILES HEATMAP ══ -->
+<div id="profiles-wrapper">
+  <div id="profiles-panel">
+    <h2>Who's close to what?</h2>
+    <div id="profiles-chart"></div>
+  </div>
+  <div id="profiles-steps">
+    <div class="profile-step" data-profile="geisel"></div>
+    <div class="profile-step" data-profile="rimac"></div>
+    <div class="profile-step" data-profile="price"></div>
+    <div class="profile-step" data-profile="trolley"></div>
+    <div class="profile-step" data-profile="average"></div>
+    <div class="profile-step" data-profile="reorder"></div>
+    <div class="profile-step" data-profile="ranked"></div>
+  </div>
+</div>
+
+<!-- ══ VERDICT ══ -->
+<div id="verdict">
+  <h2>Lorem ipsum</h2>
+
+  <div class="verdict-pull">
+    Lorem ipsum
+  </div>
+
+  <p>Lorem ipsum</p>
+
+  <p>Lorem ipsum</p>
+
+  <p><strong>Lorem ipsum</strong></p>
+</div>
+
+
+<footer>
+  Created by Dylan Dsouza &nbsp;·&nbsp; Not an official UCSD publication
+</footer>
+
+<!-- ══ SCRIPTS ══ -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/scrollama@3.2.0/build/scrollama.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
