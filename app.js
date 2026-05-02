@@ -166,7 +166,7 @@ function updateWalkableRadius(centerId) {
       visibleCollegeSet.add(id);
       if (el) el.style.opacity = 1;
     } else {
-      if (el) el.style.opacity = 0.15;
+      if (el) el.style.opacity = 0.35;
     }
   });
 }
@@ -284,7 +284,7 @@ function drawSynthesisUpTo(centerId) {
 
   Object.values(collegeMarkers).forEach(m => {
     const el = m.getElement?.();
-    if (el) { el.style.opacity = 0.15; el.style.pointerEvents = 'none'; }
+    if (el) { el.style.opacity = 0.35; el.style.pointerEvents = 'none'; }
   });
   revealed.forEach(cid => {
     const center = GRAVITY_CENTERS[cid];

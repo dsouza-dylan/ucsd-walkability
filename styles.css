@@ -25,6 +25,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 0 8vw;
   position: relative;
   overflow: hidden;
@@ -36,6 +38,16 @@ body {
   background:
     radial-gradient(ellipse at 78% 42%, rgba(255,205,0,0.06) 0%, transparent 55%),
     radial-gradient(ellipse at 20% 70%, rgba(0,98,155,0.10) 0%, transparent 50%);
+  pointer-events: none;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 18rem;
+  background: linear-gradient(to bottom, transparent, var(--bg));
   pointer-events: none;
 }
 .hero-eyebrow {
@@ -56,7 +68,7 @@ body {
   margin-bottom: 1.5rem;
 }
 .hero-sub {
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   color: var(--muted);
   max-width: 44ch;
   margin-bottom: 4rem;
@@ -64,10 +76,11 @@ body {
 }
 .scroll-cue {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 400;
-  color: var(--muted);
-  letter-spacing: 0.18em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   animation: nudge 2.2s ease-in-out infinite;
 }
 @keyframes nudge {
@@ -77,17 +90,39 @@ body {
 
 /* ── INTRO ── */
 .intro-prose {
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 6rem 2rem 5rem;
+  padding: 7rem 2rem 6rem;
+  border-top: 1px solid var(--border);
 }
 .intro-prose p {
-  font-size: 1.1rem;
-  line-height: 1.82;
-  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.65);
   margin-bottom: 1.2rem;
 }
-.intro-prose p strong { color: var(--text); }
+.intro-opening {
+  font-family: 'Playfair Display', serif !important;
+  font-style: normal !important;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem) !important;
+  color: var(--text) !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.5 !important;
+}
+.intro-statement {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 1.2rem !important;
+}
+.intro-kicker {
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  font-size: clamp(1.1rem, 2vw, 1.4rem) !important;
+  color: var(--gold) !important;
+  margin-top: 2rem !important;
+  line-height: 1.5 !important;
+}
 .big-stat {
   display: block;
   font-family: 'Playfair Display', serif;
@@ -290,14 +325,33 @@ body {
   padding: 5rem 0;
 }
 .step-content { max-width: 36ch; }
+.tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  border: 2.5px solid currentColor;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  font-size: 14px;
+  line-height: 1;
+  padding-bottom: 2px;
+  padding-left: 3px;
+}
 .step-tag {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--gold);
+  padding-bottom: 0.85rem;
   margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
 }
 .step-content h2 {
   font-family: 'Playfair Display', serif;
@@ -307,14 +361,13 @@ body {
   margin-bottom: 1rem;
 }
 .step-content p {
+  font-family: 'Lora', serif;
   font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.78;
-  margin-bottom: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
 }
 .step-content p strong { color: var(--text); }
-
-/* Time callout */
 .time-card {
   background: var(--surface);
   border-left: 3px solid var(--gold);
@@ -338,16 +391,110 @@ body {
   color: var(--muted);
   margin-top: 0.35rem;
 }
+.time-card.tc-green  { border-left-color: #34d399; }
+.time-card.tc-green  .tc-time { color: #34d399; }
+.time-card.tc-red    { border-left-color: #ef4444; }
+.time-card.tc-red    .tc-time { color: #ef4444; }
 .time-card.orange  { border-left-color: #f97316; }
 .time-card.orange  .tc-time { color: #f97316; }
-.time-card.green   { border-left-color: #38bdf8; }
-.time-card.green   .tc-time { color: #38bdf8; }
-.time-card.red     { border-left-color: #ef4444; }
-.time-card.red     .tc-time { color: #ef4444; }
-.time-card.blue    { border-left-color: #fb923c; }
-.time-card.blue    .tc-time { color: #fb923c; }
+.time-card.blue    { border-left-color: #60a5fa; }
+.time-card.blue    .tc-time { color: #60a5fa; }
 .time-card.purple  { border-left-color: #a78bfa; }
 .time-card.purple  .tc-time { color: #a78bfa; }
+
+/* Layout A — side by side */
+.time-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.2rem 0;
+}
+.time-cards-row .time-card { margin: 0; }
+
+/* Layout B — single card, two values */
+.time-card-split {
+  background: var(--surface);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.time-card-split .tcs-divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--border);
+}
+.time-card-split .tcs-side { flex: 1; }
+.time-card-split .tc-time {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.time-card-split .tc-time span { font-size: 1.1rem; }
+.time-card-split .tc-desc {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+.tcs-near .tc-time { color: #34d399; }
+.tcs-far  .tc-time { color: #ef4444; }
+
+/* Layout D — stacked with gap label */
+.time-cards-gap {
+  margin: 1.2rem 0;
+}
+.time-cards-gap .time-card { margin: 0; }
+.tc-gap-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.5rem 0;
+  border-left: 1px dashed var(--border);
+  margin-left: 1.5rem;
+}
+/* College ranking list */
+.college-ranking {
+  margin: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.cr-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  padding: 0.3rem 0;
+}
+.cr-name {
+  color: rgba(255,255,255,0.65);
+}
+.cr-time {
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  color: #0a1520;
+}
+
+.step-content p:last-of-type {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
 
 .footnote-tip {
   font-size: 0.78rem;
@@ -393,7 +540,7 @@ body {
 
 /* ── TRANSITION ── */
 #transition-banner {
-  min-height: 55vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -401,8 +548,27 @@ body {
   text-align: center;
   padding: 5rem 2rem;
   background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+#transition-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12rem;
+  background: linear-gradient(to bottom, var(--bg), transparent);
+  pointer-events: none;
+}
+#transition-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12rem;
+  background: linear-gradient(to top, var(--bg), transparent);
+  pointer-events: none;
 }
 #transition-banner h2 {
   font-family: 'Playfair Display', serif;
@@ -412,10 +578,12 @@ body {
   margin-bottom: 1rem;
 }
 #transition-banner p {
-  color: var(--muted);
-  max-width: 48ch;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--gold);
+  max-width: 44ch;
+  line-height: 1.65;
 }
 
 /* ── PROFILES SECTION ── */
@@ -494,17 +662,22 @@ body {
 
 /* ── VERDICT ── */
 #verdict {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 7rem 8vw 6rem;
-  max-width: 680px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 #verdict h2 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2.4rem, 6vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 2rem;
+  color: #ffffff !important;
 }
 #verdict p {
   font-size: 1.08rem;
@@ -514,16 +687,25 @@ body {
   text-align: left;
 }
 #verdict p strong { color: var(--text); }
+.verdict-kicker {
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  font-size: clamp(1.1rem, 2vw, 1.4rem) !important;
+  color: var(--gold) !important;
+  text-align: center !important;
+  margin-top: 2rem !important;
+  line-height: 1.5 !important;
+}
 .verdict-pull {
   font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
   font-style: italic;
+  font-weight: 700;
   color: var(--text);
-  line-height: 1.45;
-  border-left: 3px solid var(--gold);
-  padding: 0.8rem 1.2rem;
-  margin: 2rem 0;
-  text-align: left;
+  line-height: 1.4;
+  margin: 2.5rem auto;
+  max-width: 32ch;
+  text-align: center;
 }
 
 .college-wrap {
@@ -756,7 +938,18 @@ footer {
 #profiles-wrapper {
   display: flex;
   align-items: flex-start;
-  border-top: 1px solid var(--border);
+  position: relative;
+}
+#profiles-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14rem;
+  background: linear-gradient(to top, var(--bg), transparent);
+  pointer-events: none;
+  z-index: 10;
 }
 #profiles-panel {
   position: sticky;

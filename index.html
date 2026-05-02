@@ -6,7 +6,7 @@
   <title>Is UCSD Actually Walkable?</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600&family=Space+Mono&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,16 +14,16 @@
 
 <!-- ══ HERO ══ -->
 <section id="hero">
-  <p class="hero-eyebrow">Lorem ipsum &nbsp;·&nbsp; Lorem ipsum</p>
-  <h1>Is UCSD Actually Walkable?</h1>
-  <p class="hero-sub">Lorem ipsum</p>
-  <p class="scroll-cue">↓ &nbsp; find out</p>
+  <p class="hero-eyebrow">Walking Distance &nbsp;·&nbsp; UC San Diego</p>
+  <h1>UCSD Has<br>No Center.</h1>
+  <p class="hero-sub">Your commute was decided before you enrolled.</p>
+  <p class="scroll-cue">↓ &nbsp; here's why</p>
 </section>
 
 <!-- ══ INTRO ══ -->
 <div class="intro-prose">
-  <p>Lorem ipsum</p>
-  <p>Lorem ipsum</p>
+  <p class="intro-opening">There was a moment at UCSD when you stopped asking "how far is it?" and started asking "is it worth it?"</p>
+  <p class="intro-kicker">Because nothing here is actually just a short walk.<br>You decide what's worth walking for.</p>
 </div>
 
 <!-- ══ SCROLL SECTION ══ -->
@@ -59,8 +59,9 @@
       <div class="step-content">
         <div class="step-tag">The starting point</div>
         <h2>Eight colleges. No center.</h2>
-        <p>Lorem ipsum</p>
-        <p></p>
+        <p>UCSD has eight colleges.</p>
+        <p>None of them is the center.</p>
+        <p>Most campuses have a heart. We have a perimeter.</p>
       </div>
     </div>
 
@@ -69,95 +70,145 @@
       <div class="step-content">
         <div class="step-tag">Four forces</div>
         <h2>Four places pull students in four directions.</h2>
-        <p>Lorem ipsum</p>
+        <p>Nothing sits in the middle. Only competing pulls.</p>
         <div class="center-list">
           <div class="center-item"><span class="center-dot" style="background:#38bdf8"></span><strong>Geisel Library</strong> — Academic</div>
+          <div class="center-item"><span class="center-dot" style="background:#22c55e"></span><strong>RIMAC Arena</strong> — Athletic</div>
           <div class="center-item"><span class="center-dot" style="background:#a78bfa"></span><strong>Price Center</strong> — Social</div>
-          <div class="center-item"><span class="center-dot" style="background:#fb923c"></span><strong>RIMAC Arena</strong> — Athletic</div>
-          <div class="center-item"><span class="center-dot" style="background:#ffcd00"></span><strong>Trolley Station</strong> — Transit</div>
+          <div class="center-item"><span class="center-dot" style="background:#f43f5e"></span><strong>Trolley Station</strong> — Transit</div>
         </div>
-        <p>Lorem ipsum</p>
+        <p>Most routes pass through these four points.</p>
       </div>
     </div>
 
     <!-- Step 2: Geisel gravity -->
     <div class="step" data-step="geisel-gravity">
       <div class="step-content">
-        <div class="step-tag" style="color:#38bdf8">01 · Academic</div>
-        <h2>Geisel Library</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag" style="color:#38bdf8"><span class="tag-icon">📚</span>Academic</div>
+        <h2 style="color:#38bdf8">Geisel Library</h2>
+        <p>Every student ends up here eventually.</p>
+        <p>For Marshall, Sixth, and Warren — it's right there.</p>
+        <p>For everyone else, it's a choice.</p>
       </div>
     </div>
 
     <!-- Step 3: RIMAC gravity -->
     <div class="step" data-step="rimac-gravity">
       <div class="step-content">
-        <div class="step-tag" style="color:#fb923c">02 · Athletic</div>
-        <h2>RIMAC Arena</h2>
-        <p>Lorem ipsum.</p>
+        <div class="step-tag" style="color:#22c55e"><span class="tag-icon">🏋️</span>Athletic</div>
+        <h2 style="color:#22c55e">RIMAC Arena</h2>
+        <p>Nobody stumbles into RIMAC.</p>
+        <p>For some, getting there is already the workout.</p>
+        <p>If you live up north, you've got no excuses.</p>
       </div>
     </div>
 
     <!-- Step 4: Price Center gravity -->
     <div class="step" data-step="price-gravity">
       <div class="step-content">
-        <div class="step-tag" style="color:#a78bfa">03 · Social</div>
-        <h2>Price Center</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag" style="color:#a78bfa"><span class="tag-icon">🍽️</span>Social</div>
+        <h2 style="color:#a78bfa">Price Center</h2>
+        <p>The closest thing to a campus center.</p>
+        <p>Yet, half the campus is still 12 minutes away.</p>
+        <p>Don't believe me? Ask a Seventh student.</p>
       </div>
     </div>
 
     <!-- Step 5: Trolley gravity -->
     <div class="step" data-step="trolley-gravity">
       <div class="step-content">
-        <div class="step-tag" style="color:#ffcd00">04 · Transit</div>
-        <h2>Trolley Station</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag" style="color:#f43f5e"><span class="tag-icon">🚆</span>Transit</div>
+        <h2 style="color:#f43f5e">Trolley Station</h2>
+        <p>The only one that takes you off campus.</p>
+        <p>Warren is basically already there.</p>
+        <p>For everyone else, it's a journey before the journey.</p>
       </div>
     </div>
 
     <!-- Step 6: Map release -->
     <div class="step" data-step="map-release">
       <div class="step-content">
-        <div class="step-tag">Lorem ipsum</div>
-        <h2>Lorem ipsum</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag">The Full Picture</div>
+        <h2>When you zoom out, the centers disappear.</h2>
+        <p>Everything becomes distance.</p>
+        <p>Between where you are, and where you need to be.</p>
+        <p>So who does the walking?</p>
       </div>
     </div>
 
     <!-- Synthesis layer 1: Geisel -->
     <div class="step" data-step="synthesis-1">
       <div class="step-content">
-        <div class="step-tag" style="color:#38bdf8">Layer 01 · Academic</div>
-        <h2>Geisel Library</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag" style="color:#38bdf8"><span class="tag-icon">📚</span>Academic</div>
+        <h2 style="color:#38bdf8">Geisel Library</h2>
+        <div class="college-ranking">
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/marshall.png">Marshall</span><span class="cr-time" style="background:#34d399">5 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/sixth.png">Sixth</span><span class="cr-time" style="background:#6ee7b7">7 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/warren.png">Warren</span><span class="cr-time" style="background:#a3e635">7 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/muir.png">Muir</span><span class="cr-time" style="background:#facc15">10 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/erc.png">ERC</span><span class="cr-time" style="background:#fb923c">10 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/revelle.png">Revelle</span><span class="cr-time" style="background:#f97316">12 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/seventh.png">Seventh</span><span class="cr-time" style="background:#ef4444">15 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/eighth.png">Eighth</span><span class="cr-time" style="background:#dc2626">16 min</span></div>
+        </div>
+        <p>Get your steps in, Eighth College!</p>
       </div>
     </div>
 
     <!-- Synthesis layer 2: RIMAC -->
     <div class="step" data-step="synthesis-2">
       <div class="step-content">
-        <div class="step-tag" style="color:#fb923c">Layer 02 · Athletic</div>
-        <h2>RIMAC Arena</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag" style="color:#22c55e"><span class="tag-icon">🏋️</span>Athletic</div>
+        <h2 style="color:#22c55e">RIMAC Arena</h2>
+        <div class="college-ranking">
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/marshall.png">Marshall</span><span class="cr-time" style="background:#34d399">4 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/erc.png">ERC</span><span class="cr-time" style="background:#6ee7b7">4 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/seventh.png">Seventh</span><span class="cr-time" style="background:#a3e635">6 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/sixth.png">Sixth</span><span class="cr-time" style="background:#facc15">7 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/muir.png">Muir</span><span class="cr-time" style="background:#fb923c">12 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/warren.png">Warren</span><span class="cr-time" style="background:#f97316">12 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/revelle.png">Revelle</span><span class="cr-time" style="background:#ef4444">17 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/eighth.png">Eighth</span><span class="cr-time" style="background:#dc2626">21 min</span></div>
+        </div>
+        <p>It's not discipline. It's geography.</p>
       </div>
     </div>
 
     <!-- Synthesis layer 3: Price -->
     <div class="step" data-step="synthesis-3">
       <div class="step-content">
-        <div class="step-tag" style="color:#a78bfa">Layer 03 · Social</div>
-        <h2>Price Center</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag" style="color:#a78bfa"><span class="tag-icon">🍽️</span>Social</div>
+        <h2 style="color:#a78bfa">Price Center</h2>
+        <div class="college-ranking">
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/warren.png">Warren</span><span class="cr-time" style="background:#34d399">5 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/marshall.png">Marshall</span><span class="cr-time" style="background:#6ee7b7">7 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/sixth.png">Sixth</span><span class="cr-time" style="background:#a3e635">8 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/muir.png">Muir</span><span class="cr-time" style="background:#facc15">11 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/revelle.png">Revelle</span><span class="cr-time" style="background:#fb923c">11 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/erc.png">ERC</span><span class="cr-time" style="background:#f97316">12 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/eighth.png">Eighth</span><span class="cr-time" style="background:#ef4444">15 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/seventh.png">Seventh</span><span class="cr-time" style="background:#dc2626">17 min</span></div>
+        </div>
+        <p>Why do we call it center again?</p>
       </div>
     </div>
 
     <!-- Synthesis layer 4: Trolley -->
     <div class="step" data-step="synthesis-4">
       <div class="step-content">
-        <div class="step-tag" style="color:#ffcd00">Layer 04 · Transit</div>
-        <h2>Trolley Station</h2>
-        <p>Lorem ipsum</p>
+        <div class="step-tag" style="color:#f43f5e"><span class="tag-icon">🚆</span>Transit</div>
+        <h2 style="color:#f43f5e">Trolley Station</h2>
+        <div class="college-ranking">
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/warren.png">Warren</span><span class="cr-time" style="background:#34d399">8 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/marshall.png">Marshall</span><span class="cr-time" style="background:#6ee7b7">16 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/sixth.png">Sixth</span><span class="cr-time" style="background:#a3e635">18 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/revelle.png">Revelle</span><span class="cr-time" style="background:#facc15">19 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/muir.png">Muir</span><span class="cr-time" style="background:#fb923c">20 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/eighth.png">Eighth</span><span class="cr-time" style="background:#f97316">23 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/erc.png">ERC</span><span class="cr-time" style="background:#ef4444">23 min</span></div>
+          <div class="cr-row"><span class="cr-name"><img class="profile-logo-sm" src="logos/seventh.png">Seventh</span><span class="cr-time" style="background:#dc2626">26 min</span></div>
+        </div>
+        <p>Time to make friends in Warren.</p>
       </div>
     </div>
 
@@ -166,14 +217,14 @@
 
 <!-- ══ TRANSITION ══ -->
 <div id="transition-banner">
-  <h2>Lorem ipsum</h2>
-  <p>Lorem ipsum</p>
+  <h2>Not all UCSD students walk the same campus.</h2>
+  <p>It all comes down to where you live.</p>
 </div>
 
 <!-- ══ PROFILES HEATMAP ══ -->
 <div id="profiles-wrapper">
   <div id="profiles-panel">
-    <h2>Who's close to what?</h2>
+    <h2>Here's Every College, Ranked by Distance:</h2>
     <div id="profiles-chart"></div>
   </div>
   <div id="profiles-steps">
@@ -189,17 +240,13 @@
 
 <!-- ══ VERDICT ══ -->
 <div id="verdict">
-  <h2>Lorem ipsum</h2>
+  <h2>So, Is It Worth It?</h2>
 
   <div class="verdict-pull">
-    Lorem ipsum
+    The campus is the same for everyone.<br>The walk never was.
   </div>
 
-  <p>Lorem ipsum</p>
-
-  <p>Lorem ipsum</p>
-
-  <p><strong>Lorem ipsum</strong></p>
+  <p class="verdict-kicker">Proximity became a quiet lottery.<br>Some colleges won it. Some didn't.</p>
 </div>
 
 

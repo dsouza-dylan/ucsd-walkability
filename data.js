@@ -13,10 +13,10 @@ const COLLEGES = {
 };
 
 const GRAVITY_CENTERS = {
-  geisel:  { name: "Geisel Library",         label: "Academic Core",          lat: 32.8811, lng: -117.2376, color: "#38bdf8" },
-  rimac:   { name: "RIMAC Arena",             label: "Athletic North Pole",    lat: 32.8853, lng: -117.2400, color: "#fb923c" },
-  price:   { name: "Price Center",            label: "Social & Transit Core",  lat: 32.8797, lng: -117.2365, color: "#a78bfa" },
-  trolley: { name: "Trolley Station",  label: "External Transit Ingress", lat: 32.8783, lng: -117.2318, color: "#ffcd00" }
+  geisel:  { name: "Geisel Library",         label: "Academic",          lat: 32.8811, lng: -117.2376, color: "#38bdf8" },
+  rimac:   { name: "RIMAC Arena",             label: "Athletic",    lat: 32.8853, lng: -117.2400, color: "#22c55e" },
+  price:   { name: "Price Center",            label: "Social",  lat: 32.8797, lng: -117.2365, color: "#a78bfa" },
+  trolley: { name: "Trolley Station",  label: "Transit", lat: 32.8783, lng: -117.2318, color: "#f43f5e" }
 };
 
 const WALK_TIMES = {
