@@ -1,4 +1,4 @@
-# 🔱 UCSD Has No Center: Mapping Campus Walkability
+# 🔱 Is UCSD Walkable? Mapping Campus Walkability
 
 An interactive scrollytelling data story exploring **walking distances across UC San Diego**. The piece asks a simple question: is UCSD actually walkable? The answer depends entirely on where you live.
 
