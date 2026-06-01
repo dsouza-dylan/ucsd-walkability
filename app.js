@@ -7,6 +7,26 @@ let visibleCollegeSet = new Set();
 let synthDarkOverlay  = null;
 
 // ═══════════════════════════════════════════
+// HERO BACKGROUND MAP
+// ═══════════════════════════════════════════
+
+const heroMap = L.map("hero-map", {
+  scrollWheelZoom: false, zoomControl: false, attributionControl: false,
+  dragging: false, touchZoom: false, doubleClickZoom: false, keyboard: false
+});
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png", {
+  subdomains: "abcd", maxZoom: 20
+}).addTo(heroMap);
+heroMap.createPane("heroUcsdPane");
+heroMap.getPane("heroUcsdPane").style.zIndex = 250;
+heroMap.getPane("heroUcsdPane").style.pointerEvents = "none";
+L.tileLayer("https://assets.concept3d.com/assets/1005/1005_Map_Nov2025_693328374dd8f/{z}/{x}/{y}", {
+  pane: "heroUcsdPane", tms: true, minZoom: 11, maxZoom: 20,
+  errorTileUrl: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+}).addTo(heroMap);
+heroMap.fitBounds([[32.8710, -117.2460], [32.8920, -117.2300]]);
+
+// ═══════════════════════════════════════════
 // MAP SETUP
 // ═══════════════════════════════════════════
 
@@ -643,3 +663,4 @@ function buildProfiles() {
 new IntersectionObserver((entries, obs) => {
   if (entries[0].isIntersecting) { buildProfiles(); obs.disconnect(); updateProfileStep('geisel'); }
 }, { threshold: 0.15 }).observe(document.getElementById("profiles-wrapper"));
+
