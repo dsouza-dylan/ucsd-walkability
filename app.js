@@ -405,6 +405,8 @@ function removeSynthOverlay() {
 // STEP HANDLER
 // ═══════════════════════════════════════════
 
+const MOBILE_ZOOM_OFFSET = window.innerWidth < 760 ? -1.1 : 0;
+
 let activeKey      = null;
 let pendingDraw    = null;
 let lastGravityKey = null;
@@ -459,7 +461,11 @@ function applyStep(key) {
     drawAfterMove(() => drawGravityCenter(cfg.gravity));
   }
 
-  const zoomTarget = (cfg.gravity && !isSynth) ? BASE_ZOOM + 1 : BASE_ZOOM;
+  const isMobile = window.innerWidth < 760;
+  const zoomTarget = !cfg.gravity     ? BASE_ZOOM + MOBILE_ZOOM_OFFSET
+    : (isSynth && isMobile)           ? 14.7
+    : isSynth                         ? BASE_ZOOM
+    : BASE_ZOOM + 1 + MOBILE_ZOOM_OFFSET;
   map.flyTo(cfg.center, zoomTarget, { duration: 0.9, easeLinearity: 0.25 });
 
   document.getElementById("map-panel").classList.toggle("map-faded", key === "map-release");
@@ -474,7 +480,7 @@ scroller.setup({ step: ".step", offset: 0.48 })
   .onStepEnter(({ element }) => applyStep(element.dataset.step));
 window.addEventListener("resize", scroller.resize);
 
-map.setView([32.8810, -117.2375], BASE_ZOOM);
+map.setView([32.8810, -117.2375], BASE_ZOOM + MOBILE_ZOOM_OFFSET);
 
 // ═══════════════════════════════════════════
 // PROFILES HEATMAP
@@ -550,6 +556,14 @@ function reorderByAverage() {
 function updateProfileStep(step) {
   const isRanked  = step === 'ranked';
   const isReorder = step === 'reorder';
+  if (window.innerWidth < 760) {
+    const chart = document.getElementById('profiles-chart');
+    if (isRanked) {
+      setTimeout(() => { chart.style.zoom = '1'; }, 500);
+    } else {
+      chart.style.zoom = '';
+    }
+  }
   const isDimmed  = step === 'average' || step === 'reorder';
   // 'reorder' shows the same columns as 'average'
   const displayIdx = COLUMN_STEPS.indexOf(step === 'reorder' ? 'average' : step);
