@@ -20,7 +20,7 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
 heroMap.createPane("heroUcsdPane");
 heroMap.getPane("heroUcsdPane").style.zIndex = 250;
 heroMap.getPane("heroUcsdPane").style.pointerEvents = "none";
-L.tileLayer("https://assets.concept3d.com/assets/1005/1005_Map_Nov2025_693328374dd8f/{z}/{x}/{y}", {
+L.tileLayer("https://assets.concept3d.com/assets/1005/1005_Map_69fce94e12df9/{z}/{x}/{y}", {
   pane: "heroUcsdPane", tms: true, minZoom: 11, maxZoom: 20,
   errorTileUrl: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
 }).addTo(heroMap);
@@ -43,7 +43,7 @@ ucsdPane.style.zIndex        = 250;
 ucsdPane.style.filter        = "brightness(0.72) saturate(0.88)";
 ucsdPane.style.pointerEvents = "none";
 
-L.tileLayer("https://assets.concept3d.com/assets/1005/1005_Map_Nov2025_693328374dd8f/{z}/{x}/{y}", {
+L.tileLayer("https://assets.concept3d.com/assets/1005/1005_Map_69fce94e12df9/{z}/{x}/{y}", {
   pane: "ucsdPane", tms: true, minZoom: 11, maxZoom: 20,
   attribution: "Map © UC San Diego / Concept3D",
   errorTileUrl: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
